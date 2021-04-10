@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>
+	jQuery Changing background-image CSS Property
+	</title>
+	<style>
+		.box {
+			width: 700px;
+			height: 220px;
+			border: 2px solid black;
+			
+		h1{
+			color:green;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			// Change background image of a div by clicking on the button
+			$("button").click(function() {
+				var imageUrl =
+"https://www.geeksforgeeks.org/wp-content/uploads/jquery-banner-768x256.png";
+				$(".box").css("background-image", "url(" + imageUrl + ")");
+			});
+
+			$( ".box" ).mouseover(function() {
+  				$( ".box" ).css({"background-color":"red"});
+			});
+
+			$( ".box" ).mouseout(function() {
+  				$( ".box" ).css({"background-color":"blue"});
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<center>
+	<h1>Mouse Over, Mouse out and onclick function</h1>
+
+	<div class="box"></div>
+	<p>
+		<button type="button">
+			Change Background Image
+		</button>
+	</p>
+	</center>
+</body>
+
+</html>					
